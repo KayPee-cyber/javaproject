@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saved Names</title>
+</head>
+
+<body>
+    <h1>Results</h1>
+    <p th:text="'id: '+ ${users.id}" />
+    <p th:text="'First Name: '+ ${users.firstName}" />
+    <p th:text="'Last Name: '+ ${users.lastName}" />
+    <p th:text="'Nickname: '+ ${users.nickName}" />
+
+<div>
+    <p>View table<a th:action ="@{/dtable}" method = "get">here</a></p>
+</div>
+</body>
+
+</html>

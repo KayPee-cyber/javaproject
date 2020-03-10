@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabled Data</title>
+</head>
+<body>
+<table border="1" style = "width:300px">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Nickname</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each ="users : ${users}">
+        <td><p th:text = "${users.id}"></p></td>
+        <td><p th:text = "${users.firstName}"></p></td>
+        <td><p th:text = "${users.lastName}"></p></td>
+        <td><p th:text = "${users.nickName}"></p></td>
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Naming Convention</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: darkturquoise;
+            color: floralwhite;
+        }
+        
+        div {
+            align-content: center;
+            margin-top: 170px;
+            margin-left: 35%;
+            /* background-origin: border-box; */
+        }
+        
+        div input {
+            margin: 20px;
+        }
+        
+        .container {
+            border: gray;
+            border-width: 1px;
+            width: 310px;
+            height: 270px;
+            padding-left: 30px;
+            border-radius: 15px;
+        }
+    </style>
+
+    <div class="container" style="border:1px solid rgb(88, 80, 80);">
+        <form th:action="@{/insert}" th:object="${users}" method="post">
+            First name: <input type="text" th:field="*{firstName}" placeholder="First name"><br>
+            Last name: <input type="text" th:field="*{lastName}" placeholder="Last name"><br>
+            Nickname: <input type="text" th:field="*{nickName}" placeholder="Nickname"><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
